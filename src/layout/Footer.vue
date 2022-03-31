@@ -41,10 +41,35 @@
 	</footer>
 </template>
 <script>
+import FacebookIcon from "vue-material-design-icons/Facebook.vue";
+import InstagramIcon from "vue-material-design-icons/Instagram.vue";
+import LinkedinIcon from "vue-material-design-icons/Linkedin.vue";
+import YoutubeIcon from "vue-material-design-icons/Youtube.vue";
 export default {
-	name: 'Footer'
+	name: 'Footer',
+	components: {
+		FacebookIcon,
+		InstagramIcon,
+		LinkedinIcon,
+		YoutubeIcon,
+	}
 }
 </script>
-<style lang="">
-	
+<!-- Adicione o atributo "scoped" para limitar o CSS apenas a este componente -->
+<style scoped lang="scss">
+a {
+	color: #ffff;
+}
+.material-design-icon.icon-2x {
+	margin-top: 0.5rem;
+	height: 2.5em;
+	width: 2.5em;
+	line-height: 1;
+	margin-right: 0.25rem;
+}
+
+.material-design-icon.icon-2x > .material-design-icon__svg {
+	height: 2.5em;
+	width: 2.5em;
+}
 </style>

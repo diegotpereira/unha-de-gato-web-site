@@ -43,13 +43,13 @@ export default {
 }
 
 .feature-one {
-  background-image: url("../assets/images/feature-1.jpg");
+  background-image: url("../assets/imagens/feature-1.jpg");
   background-position: center;
   background-size: cover;
 }
 
 .feature-two {
-  background-image: url("../assets/images/feature-2.jpg");
+  background-image: url("../assets/imagens/feature-2.jpg");
   background-position: center;
   background-size: cover;
 }
