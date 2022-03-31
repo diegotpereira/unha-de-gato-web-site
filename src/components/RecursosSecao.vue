@@ -5,7 +5,7 @@
 				<p class="title is-4 has-text-white">A vida de amanhã é de muito estresse. Número inteiro</p>
 				<p class="subtitle is-6 has-text-white">
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-					Perspiciatis pariatur at aperiam corporis repellat quas delectus
+					Perspiciatis pariatur at aperiam corporis repellat quas delectu
 				</p>
 			</div>
 			<div class="column is-half is-gapless feature-two">
