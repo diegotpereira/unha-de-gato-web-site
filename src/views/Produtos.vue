@@ -9,8 +9,8 @@
 							<router-link to="/produtos" class="button is-white">
 								Mostre tudo
 							</router-link>
-							<router-link class="button is-white">
-								<!--{{ categoria }}-->
+							<router-link class="button is-white" to="/">
+								
 							</router-link>
 						</div>
 					</div>
@@ -42,6 +42,11 @@ export default {
 			' brinquedos para gatos, caixas para gatos e tudo o que você e seu amigo possam precisar para uma vida feliz e sem preocupações.'
 		}
 	},
+	methods: {
+		getQuery(categoria) {
+			return categoria
+		}
+	}
 }
 </script>
 <style lang="scss"></style>
