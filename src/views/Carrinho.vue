@@ -10,8 +10,12 @@
 	</div>
 </template>
 <script>
+import HeroSubpagina from '@/components/HeroSubpagina.vue'
 export default {
-	name: 'Carrinho'
+	name: 'Carrinho',
+	components: {
+		Hero: HeroSubpagina
+	}
 }
 </script>
 <style scoped lang="scss"></style>

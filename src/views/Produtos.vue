@@ -1,15 +1,16 @@
 <template>
 	<div>
+		<Hero :title="title" :subtitle="subtitle" />
 		<section class="section">
 			<div class="container">
 				<div class="columns">
 					<div class="column">
 						<div class="buttons has-addons">
-							<router-link to="/produtos" class="button is-white" :class="{}">
+							<router-link to="/produtos" class="button is-white">
 								Mostre tudo
 							</router-link>
-							<router-link class="button is-white" :class="{}">
-								{{ categoria }}
+							<router-link class="button is-white">
+								<!--{{ categoria }}-->
 							</router-link>
 						</div>
 					</div>
@@ -24,8 +25,23 @@
 	</div>
 </template>
 <script>
+import HeroSubpagina from '@/components/HeroSubpagina.vue'
+
 export default {
-	name: 'Produtos'
+	name: 'Produtos',
+	components: {
+		Hero: HeroSubpagina
+	},
+	data() {
+		return {
+			title: 'Nossos produtos',
+			subtitle: 'Conosco, você pode encontrar apenas os favoritos do seu gato. ' +
+			' Os gatos são, como você provavelmente sabe, conhecidos por serem um pouco' + 
+			' exigentes, e nós pensamos que sim - é claro que o gato merece apenas o melhor!' +
+			' Entre nossos produtos, você encontrará uma seleção de ração para gatos, doces para gatos,' + 
+			' brinquedos para gatos, caixas para gatos e tudo o que você e seu amigo possam precisar para uma vida feliz e sem preocupações.'
+		}
+	},
 }
 </script>
 <style lang="scss"></style>

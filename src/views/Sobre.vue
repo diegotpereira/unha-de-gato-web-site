@@ -1,7 +1,7 @@
 <template>
 	<div class="about">
 		<Hero title="Sobre nós" />
-
+		Sobre
 		<section class="section">
 			<div class="container">
 				<div class="columns is-centered">
@@ -16,7 +16,7 @@
 							constantemente produtos novos, únicos e atuais.
 						</p>
 					</div>
-					<div class="column column-img is-6 is-offeset-1 has-background-black">
+					<div class="column column-img is-6 is-offset-1 has-background-black">
 						<figure class="image is-4by3">
 							<img src="@/assets/imagens/about.jpg" />
 						</figure>
@@ -27,7 +27,17 @@
 	</div>
 </template>
 <script>
+import HeroSubpagina from '@/components/HeroSubpagina.vue'
 export default {
-	name: 'Sobre'
+	name: 'Sobre',
+	components: {
+		Hero: HeroSubpagina
+	}
 }
 </script>
+
+<style scoped lang="scss">
+.column-img {
+  padding: 0;
+}
+</style>

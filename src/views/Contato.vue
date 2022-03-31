@@ -44,7 +44,17 @@
 	</div>
 </template>
 <script>
+import HeroSubpagina from '@/components/HeroSubpagina.vue'
 export default {
-	name: 'Contato'
+	name: 'Contato',
+	components: {
+		Hero: HeroSubpagina
+	}
 }
 </script>
+<!-- Adicione o atributo "scoped" para limitar o CSS apenas a este componente -->
+<style scoped lang="scss">
+.column-img {
+  padding: 0;
+}
+</style>

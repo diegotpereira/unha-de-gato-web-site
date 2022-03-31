@@ -24,6 +24,7 @@ export default {
 }
 </script>
 
+<!-- Adicione o atributo "scoped" para limitar o CSS apenas a este componente -->
 <style scoped lang="scss">
 .hero {
   background-image: url("../assets/imagens/unha-de-gato-2.jpg");
