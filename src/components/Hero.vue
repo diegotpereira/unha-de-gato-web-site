@@ -50,5 +50,8 @@ export default {
     margin-top: -1.5rem;
     line-height: 1.5;
   }
+  .hero.is-primary .title {
+    color: #3b407c;
+  }
 }
 </style>
