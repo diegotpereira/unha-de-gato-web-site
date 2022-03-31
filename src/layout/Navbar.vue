@@ -5,7 +5,14 @@
         <img :src="logo" alt="Unha de Gato" width="150px" />
 			</a>
 
-			<a href="" class="navbar-burger" role="button" aria-label="menu" aria-expanded="flase" @click="estaAberto = !estaAberto" v-bind:class="{'is-active': estaAberto}">
+			<a 
+			class="navbar-burger" 
+			role="button" 
+			aria-label="menu" 
+			aria-expanded="false" 
+			@click="estaAberto = !estaAberto" 
+			v-bind:class="{'is-active': estaAberto}">
+
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
 				<span aria-hidden="true"></span>
@@ -14,9 +21,9 @@
 		<div class="navbar-menu" v-bind:class="{'is-active': estaAberto}">
 			<div class="navbar-end">
 				<router-link to="/" class="navbar-item">Começo</router-link>
-				<router-link to="/" class="navbar-item">Produtos</router-link>
-				<router-link to="/" class="navbar-item">Blog</router-link>
-				<router-link to="/" class="navbar-item">Sobre nós</router-link>
+				<router-link to="/produtos" class="navbar-item">Produtos</router-link>
+				<router-link to="/blog" class="navbar-item">Blog</router-link>
+				<router-link to="/sobre" class="navbar-item">Sobre</router-link>
 				<router-link to="/" class="navbar-item">Contato</router-link>
 				<router-link to="/" class="navbar-item">Carrinho de compras</router-link>
 			</div>
