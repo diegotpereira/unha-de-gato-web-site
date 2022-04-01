@@ -2,22 +2,30 @@
 	<div class="card">
 		<div class="card-image">
 			<figure class="image is-4by3 has-background-white-ter">
-				<router-link :to="postUrl" @click.native="salvarPostagemAtual(post)" tag="img" :src="postImg">
-				
+				<router-link 
+                  :to="postUrl" 
+                  @click.native="salvarPostagemAtual(post)" 
+					tag="img" 
+					:src="postImg">
 				</router-link>
 			</figure>
 		</div>
 		<div class="card-content">
 			<div class="content">
-				<router-link :to="postUrl" @click.native="salvarPostagemAtual(post)">
+				<router-link 
+					:to="postUrl" 
+					@click.native="salvarPostagemAtual(post)">
 					<h3 class="title is-size-4 has-text-weight-bold">
 						{{ post.titulo }}
 					</h3>
 				</router-link>
-				<p><clock-icon class="clock-icon" /></p>
+				<p><clock-icon class="clock-icon" /> {{ postData }}</p>
 
-				<p>  </p>
-				<router-link :to="postUrl" class="is-primary has-text-weight-bold is-uppercase" @click.native="salvarPostagemAtual(post)">
+				<p>{{ postIntro }}</p>
+				<router-link 
+				:to="postUrl" 
+				class="is-primary has-text-weight-bold is-uppercase" 
+				@click.native="salvarPostagemAtual(post)">
 					Consulte Mais informação
 					<paw-icon class="paw-icon" />
 				</router-link>
@@ -39,17 +47,23 @@ export default {
 		PawIcon,
 		ClockIcon
 	},
-	methods: {
-		salvarPostagemAtual(post) {
-			this.$store.commit('salvarPostagemAtual', post)
-		}
-	},
 	computed: {
 		postUrl() {
-			return '/blog' + this.post.slug
+			return '/blog/' + this.post.slug
 		},
 		postImg() {
 			return require('@/assets/imagens/blog/' + this.post.image)
+		},
+		postInro() {
+			return this.post.content.slice(0, 150) + '...'
+		},
+		postData() {
+			return null
+		}
+	},
+	methods: {
+		salvarPostagemAtual(post) {
+			this.$store.commit('salvarPostagemAtual', post)
 		}
 	}
 }

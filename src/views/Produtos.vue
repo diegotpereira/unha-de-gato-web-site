@@ -6,18 +6,31 @@
 				<div class="columns">
 					<div class="column">
 						<div class="buttons has-addons">
-							<router-link to="/produtos" class="button is-white">
+							<router-link 
+							to="/produtos" 
+							class="button is-white"
+							:class="{'is-active': !$route.query.categoria}">
 								Mostre tudo
 							</router-link>
-							<router-link class="button is-white" to="/">
-								
+							<router-link 
+							class="button is-white"
+							v-for="categoria in getCategorias"
+							:key="categoria" 
+							:to="getQuery(categoria)"
+							:class="{
+								'is-active': categoria.toLowerCase() ===
+								$route.query.categoria}">
+
+								{{ categoria }}
 							</router-link>
 						</div>
 					</div>
 				</div>
 				<div class="columns is-multiline">
-					<div class="column is-half-tablet is-one-quarter-desktop">
-						<ProdutoCard  />
+					<div class="column is-half-tablet is-one-quarter-desktop"
+					v-for="produto in getProdutos"
+					:key="produto.id">
+						<ProdutoCard  :produto="produto"/>
 					</div>
 				</div>
 			</div>
@@ -43,9 +56,17 @@ export default {
 			' brinquedos para gatos, caixas para gatos e tudo o que você e seu amigo possam precisar para uma vida feliz e sem preocupações.'
 		}
 	},
+	computed: {
+		getCategorias() {
+			return this.$store.getters.getProdutoCategorias
+		},
+		getProdutos() {
+			return this.$store.getters.getProdutos(this.$route.query.categoria)
+		}
+	},
 	methods: {
 		getQuery(categoria) {
-			return categoria
+			return 'produtos?categoria=' + categoria.toLowerCase()
 		}
 	}
 }
