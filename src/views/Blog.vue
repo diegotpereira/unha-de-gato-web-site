@@ -4,8 +4,11 @@
 		<section class="section has-background-white-ter">
 			<div class="container">
 				<div class="columns is-multiline">
-					<div class="column is-half">
-						<Post/>
+					<div 
+					v-for="post in blogPosts"
+					:key="post.id" 
+					class="column is-half">
+						<Post :post="post" />
 					</div>
 				</div>
 			</div>
@@ -27,5 +30,10 @@ export default {
 			title: 'Notícias, dicas e sugestões'
 		}
 	},
+	computed: {
+		blogPosts() {
+			return this.$store.getters.getBlogPosts
+		}
+	}
 }
 </script>

@@ -5,7 +5,7 @@
 		<RecursoProdutos :produtos="getTopProdutos" title="Produtos populares"/>
 		<RecursosSecao />
 		<RecursoProdutos :produtos="getUltimosProdutos" title="Novidade na loja"/>
-		<PostagensBlogDestaque />
+		<PostagensBlogDestaque :posts="getUltimosPosts" title="Últimas do blog" />
 	</div>
 </template>
 <script>
@@ -26,7 +26,7 @@ export default {
 		PostagensBlogDestaque
 	},
 	computed: {
-		...mapGetters(['getTopProdutos', 'getUltimosProdutos'])
+		...mapGetters(['getTopProdutos', 'getUltimosProdutos', 'getUltimosPosts'])
 	}
 }
 </script>

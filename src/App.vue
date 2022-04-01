@@ -16,6 +16,7 @@ export default {
   },
 	created() {
 		this.$store.dispatch('bindProdutos')
+		this.$store.dispatch('bindBlogPosts');
   }
 }
 </script>

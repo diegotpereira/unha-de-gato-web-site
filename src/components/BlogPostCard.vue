@@ -36,6 +36,8 @@
 <script>
 import PawIcon from 'vue-material-design-icons/Paw.vue';
 import ClockIcon from 'vue-material-design-icons/ClockOutline.vue';
+import moment from 'moment';
+
 export default {
 	name: 'BlogPostCard',
 	props: {
@@ -54,11 +56,11 @@ export default {
 		postImg() {
 			return require('@/assets/imagens/blog/' + this.post.image)
 		},
-		postInro() {
+		postIntro() {
 			return this.post.content.slice(0, 150) + '...'
 		},
 		postData() {
-			return null
+			return moment.unix(this.post.postado.segundos).format('DD-MM-YYYY')
 		}
 	},
 	methods: {

@@ -8,9 +8,10 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state: {
+        atualProduto: {},
+        produtos: [],
         blogPosts: [],
-        atualProduto: [],
-        produtos: []
+        atualPost: {}
 
     },
     plugins: [
@@ -36,11 +37,24 @@ export const store = new Vuex.Store({
         },
         getTopProdutos: state => {
             return state.produtos.filter(prod => prod.avaliacao === 5).slice(0, 4)
+        },
+        // obter postagens blog
+        getBlogPosts: state => {
+            return state.blogPosts
+        },
+        getAtualPost: state => {
+            return state.atualPost
+        },
+        getUltimosPosts: state => {
+            return state.blogPosts.slice(-4, -1)
         }
     },
     mutations: {
         ...vuexfireMutations,
         salvarPostagemAtual: (state, post) => {
+            state.atualPost = post
+        },
+        salvarAtualPost: (state, post) => {
             state.atualPost = post
         }
     },
