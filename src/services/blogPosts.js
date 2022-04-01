@@ -16,7 +16,7 @@ firebase.initializeApp({
 
 var db = firebase.firestore();
 
-var blogPosts = [{
+var blogposts = [{
     "autor": "Diego Pereira",
     "categoria": "Unha de Gato",
     "content": "Tudo que fazemos, fazemos com amor",
@@ -27,8 +27,8 @@ var blogPosts = [{
 
 }]
 
-blogPosts.forEach(function(obj) {
-    db.collection("blogPosts").add({
+blogposts.forEach(function(obj) {
+    db.collection("blogposts").add({
             autor: obj.autor,
             categoria: obj.categoria,
             content: obj.content,
