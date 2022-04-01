@@ -1,7 +1,6 @@
 <template>
 	<div class="about">
 		<Hero title="Sobre nós" />
-		Sobre
 		<section class="section">
 			<div class="container">
 				<div class="columns is-centered">

@@ -5,7 +5,7 @@
 				<div class="columns">
 					<div class="column is-half">
 						<transition appear appear-active-class="animated fadeInUp slow">
-							<h1 class="title is-1 has-text-weight-bold">Nós amamos gatos. Os gatos nos amam.</h1>
+							<h1 class="title is-1 has-text-weight-bold">Nós amamos gatos. <br />E os gatos nos amam.</h1>
 						</transition>
 						<transition appear appear-active-class="animated fadeInUp slow delay-1s">
 							<h2 class="subtitle is-5">
