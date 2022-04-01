@@ -13,6 +13,9 @@ export default {
   components: {
     'app-navbar': Navbar,
 	'app-footer': Footer
+  },
+	created() {
+		this.$store.dispatch('bindProdutos')
   }
 }
 </script>

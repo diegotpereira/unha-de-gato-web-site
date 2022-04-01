@@ -17,16 +17,16 @@
 				@click.native="salvarAtualProduto(produto)">
 					<h3 class="is-size-6"> {{produto.titulo}} </h3>
 				</router-link>
-				<p class="title is-size-2 has-text-weight-bold-is-marginless">
-					{{produto.preco}}:-
+				<p class="title is-size-2 has-text-weight-bold is-marginless">
+					{{produto.preco}}
 				</p>
-				<p class="is-size-7">
+				<p v-if="produto.inventario" class="is-size-7">
 					<span class="icon">
 						<check-icon class="has-text-primary" />
 					</span>
 					<span>Em estoque</span>
 				</p>
-				<p class="is-size-7">
+				<p v-else class="is-size-7">
 					<span class="icon">
 						<cart-off-icon class="has-text-danger" />
 					</span>
@@ -72,3 +72,17 @@ export default {
 	}
 }
 </script>
+<style scoped lang="scss">
+.card {
+    box-shadow: none !important;
+    .card-image {
+        cursor: pointer;
+    }
+    .card-content {
+        padding: 1.5rem 0;
+        .content h3 {
+            margin-bottom: 0.3rem;
+        }
+    }
+}
+</style>

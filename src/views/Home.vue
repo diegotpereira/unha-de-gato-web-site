@@ -2,9 +2,9 @@
 	<div class="home">
 		<Hero />
 		<Intro />
-		<RecursoProdutos />
+		<RecursoProdutos :produtos="getTopProdutos" title="Produtos populares"/>
 		<RecursosSecao />
-		<RecursoProdutos />
+		<RecursoProdutos :produtos="getUltimosProdutos" title="Novidade na loja"/>
 		<PostagensBlogDestaque />
 	</div>
 </template>
@@ -14,6 +14,8 @@ import Intro from '@/components/Intro.vue'
 import RecursoProdutos from '@/components/RecursoProdutos.vue'
 import RecursosSecao from '@/components/RecursosSecao.vue'
 import PostagensBlogDestaque from '@/components/PostagensBlogDestaque.vue'
+import { mapGetters } from 'vuex'
+
 export default {
 	name: 'home',
 	components: {
@@ -22,6 +24,9 @@ export default {
 		RecursoProdutos,
 		RecursosSecao,
 		PostagensBlogDestaque
+	},
+	computed: {
+		...mapGetters(['getTopProdutos', 'getUltimosProdutos'])
 	}
 }
 </script>

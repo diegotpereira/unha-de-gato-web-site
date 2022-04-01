@@ -66,7 +66,7 @@ export default {
 	},
 	methods: {
 		getQuery(categoria) {
-			return 'produtos?categoria=' + categoria.toLowerCase()
+			return '/produtos?categoria=' + categoria.toLowerCase()
 		}
 	}
 }

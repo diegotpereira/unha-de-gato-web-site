@@ -30,6 +30,12 @@ export const store = new Vuex.Store({
         },
         getProdutoCategorias: state => {
             return [...new Set(state.produtos.map(prod => prod.categoria))]
+        },
+        getUltimosProdutos: state => {
+            return state.produtos.slice(-5, -1)
+        },
+        getTopProdutos: state => {
+            return state.produtos.filter(prod => prod.avaliacao === 5).slice(0, 4)
         }
     },
     mutations: {
