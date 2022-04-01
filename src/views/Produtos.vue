@@ -17,7 +17,7 @@
 				</div>
 				<div class="columns is-multiline">
 					<div class="column is-half-tablet is-one-quarter-desktop">
-
+						<ProdutoCard :produto="produto" />
 					</div>
 				</div>
 			</div>
@@ -26,11 +26,12 @@
 </template>
 <script>
 import HeroSubpagina from '@/components/HeroSubpagina.vue'
-
+import ProdutoCard from '@/components/ProdutoCard.vue'
 export default {
 	name: 'Produtos',
 	components: {
-		Hero: HeroSubpagina
+		Hero: HeroSubpagina,
+		ProdutoCard
 	},
 	data() {
 		return {
