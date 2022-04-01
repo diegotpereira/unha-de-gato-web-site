@@ -5,8 +5,11 @@
 				{{ title }}
 			</h2>
 			<div class="columns is-multiline">
-				<div class="column is-one-third">
-					<BlogPostCard/>
+				<div
+				v-for="(post, index) in posts"
+				v-bind:key="index" 
+				class="column is-one-third">
+					<BlogPostCard :post="post"/>
 				</div>
 			</div>
 		</div>

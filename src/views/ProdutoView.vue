@@ -27,7 +27,7 @@
 				</div>
 				<ArrowIcon />
 				<router-link to="/produtos" class="is-size-7 has-text-grey">
-				    Voltar para todos os produtos
+					Voltar para todos os produtos
 				</router-link>
 			</div>
 		</section>
@@ -39,6 +39,8 @@ import { mapGetters } from 'vuex';
 import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import ProdutoDescricao from '@/components/ProdutoDescricao.vue'
 import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue';
+import ProdutoDetalhes from '@/components/ProdutoDetalhes.vue'
+
 export default {
 	name: 'ProdutoView',
 	components: {

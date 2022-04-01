@@ -16,6 +16,13 @@ const routes = [{
             import ('../views/Produtos.vue')
     },
     {
+        path: '/produtos/:slug',
+        name: 'view-produto',
+        props: true,
+        component: () =>
+            import ('../views/ProdutoView.vue')
+    },
+    {
         path: '/blog',
         name: 'blog',
         component: () =>
@@ -42,6 +49,7 @@ const routes = [{
     {
         path: '/blog/:slug',
         name: 'view-blog',
+        props: true,
         component: () =>
             import ('../views/BlogView.vue')
     }
