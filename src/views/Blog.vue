@@ -17,7 +17,7 @@
 </template>
 <script>
 import HeroSubpagina from '@/components/HeroSubpagina.vue'
-import BlogPostCard from '@/components/BlogPostCard.vue';
+import BlogPostCard from '@/components/BlogPostCard.vue'
 
 export default {
 	name: 'Blog',

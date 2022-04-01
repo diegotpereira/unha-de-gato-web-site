@@ -54,8 +54,8 @@ export const store = new Vuex.Store({
         salvarPostagemAtual: (state, post) => {
             state.atualPost = post
         },
-        salvarAtualPost: (state, post) => {
-            state.atualPost = post
+        salvarAtualProduto: (state, produto) => {
+            state.atualProduto = produto
         }
     },
     actions: {
