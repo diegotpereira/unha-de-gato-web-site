@@ -25,7 +25,7 @@
 				<router-link to="/blog" class="navbar-item">Blog</router-link>
 				<router-link to="/sobre" class="navbar-item">Sobre</router-link>
 				<router-link to="/contato" class="navbar-item">Contato</router-link>
-				<router-link to="/carrinho" class="navbar-item">Carrinho de compras</router-link>
+				<router-link to="/carrinho" class="navbar-item">Carrinho</router-link>
 			</div>
 		</div>
 	</nav>

@@ -6,19 +6,26 @@
 			</h2>
 			<div class="columns is-multiline">
 				<div class="column is-one-third">
-
+					<BlogPostCard/>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
 <script>
+import BlogPostCard from '@/components/BlogPostCard.vue'
 export default {
 	name: 'PostagensBlogDestaque',
 	props: {
+		posts: {
+			type: Array
+		},
 		title: {
 			type: String
 		}
+	},
+	components: {
+		BlogPostCard
 	}
 }
 </script>

@@ -2,12 +2,12 @@
 	<div class="card">
 		<div class="card-image">
 			<figure class="image is-square has-background-white-ter">
-				<router-link ></router-link>
+				<router-link to="/"></router-link>
 			</figure>
 		</div>
 		<div class="card-content">
 			<div class="content">
-				<router-link >
+				<router-link to="/">
 					<h3 class="is-size-6"> produto.titulo </h3>
 				</router-link>
 				<p class="title is-size-2 has-text-weight-bold-is-marginless">
@@ -30,12 +30,19 @@
 	</div>
 </template>
 <script>
+import CartOffIcon from 'vue-material-design-icons/CartOff.vue';
+import CheckIcon from 'vue-material-design-icons/CheckCircle.vue';
+
 export default {
 	name: 'ProdutoCard',
 	props: {
 		produto: {
 			type: Object
 		}
+	},
+	components: {
+		CartOffIcon,
+		CheckIcon
 	}
 }
 </script>

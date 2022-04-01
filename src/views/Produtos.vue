@@ -17,7 +17,7 @@
 				</div>
 				<div class="columns is-multiline">
 					<div class="column is-half-tablet is-one-quarter-desktop">
-						<ProdutoCard :produto="produto" />
+						<ProdutoCard  />
 					</div>
 				</div>
 			</div>

@@ -38,6 +38,12 @@ const routes = [{
         name: 'carrinho',
         component: () =>
             import ('../views/Carrinho.vue')
+    },
+    {
+        path: '/blog/:slug',
+        name: 'view-blog',
+        component: () =>
+            import ('../views/BlogView.vue')
     }
 ]
 

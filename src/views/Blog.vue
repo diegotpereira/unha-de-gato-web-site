@@ -5,7 +5,7 @@
 			<div class="container">
 				<div class="columns is-multiline">
 					<div class="column is-half">
-						
+						<Post/>
 					</div>
 				</div>
 			</div>
@@ -14,10 +14,13 @@
 </template>
 <script>
 import HeroSubpagina from '@/components/HeroSubpagina.vue'
+import BlogPostCard from '@/components/BlogPostCard.vue';
+
 export default {
 	name: 'Blog',
 	components: {
-		Hero: HeroSubpagina
+		Hero: HeroSubpagina,
+		Post: BlogPostCard
 	},
 	data() {
 		return {
