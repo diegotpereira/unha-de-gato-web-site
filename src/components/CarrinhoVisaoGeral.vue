@@ -10,7 +10,7 @@
 			<small>Os itens no carrinho de compras não são reservados.</small>
 		</div>
 
-		<CarrinhoDetalhes :soma="soma" />
+		<CarrinhoDetalhes :sum="sum" />
 	</div>
 </template>
 <script>
@@ -28,9 +28,9 @@ export default {
 		...mapGetters({
 			produtos: 'getCarrinhoCompras'
 		}),
-		soma() {
+		sum() {
 			return this.produtos.reduce(
-				(soma, produto) => soma + produto.preco * produto.quantidade, 0
+				(sum, produto) => sum + produto.preco * produto.quantidade, 0
 			);
 		}
 	}

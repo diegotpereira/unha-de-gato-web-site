@@ -66,6 +66,9 @@ export const store = new Vuex.Store({
         },
         atualizarQuantidade: (state, payload) => {
             state.carrinhoCompras[payload.index].quantidade = payload.number
+        },
+        addNoCarrinhoCompras: (state, item) => {
+            state.carrinhoCompras.push(item)
         }
     },
     actions: {

@@ -7,13 +7,13 @@
 			<div class="level">
 				<div class="level-left">
 					<div class="level-item">
-						<h3 class="is-size-6 has-text weight-bold">
+						<h3 class="is-size-6 has-text-weight-bold">
 							{{ item.nome }}
 						</h3>
 					</div>
 				</div>
 				<div class="level-right">
-					<p class="level-item">{{ ietm.preco }} R$</p>
+					<p class="level-item">{{ item.preco }} R$</p>
 				</div>
 			</div>
 			<NumeroSpinner

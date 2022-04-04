@@ -5,7 +5,7 @@
 				<a class="button is-outlined" @click="subtrair">-</a>
 			</div>
 			<div class="control">
-				<input type="text" class="input.is-expanded" v-model="novaQuantidade" readonly />
+				<input type="text" class="input is-expanded" v-model="novaQuantidade" readonly />
 			</div>
 			<div class="control">
 				<a class="button is-outlined" @click="add">+</a>

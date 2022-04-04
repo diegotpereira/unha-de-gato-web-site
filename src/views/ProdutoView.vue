@@ -17,6 +17,7 @@
 					</div>
 					<div class="column is-two-fifths is-offset-1">
 						<ProdutoDetalhes />
+						<AddNoCarrinho @toggle="toggle" />
 						<transition
 						enter-active-class="animated fadeInDown"
 						leave-active-class="animated fadeOutUp">
@@ -40,6 +41,7 @@ import Breadcrumbs from '@/components/Breadcrumbs.vue'
 import ProdutoDescricao from '@/components/ProdutoDescricao.vue'
 import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue';
 import ProdutoDetalhes from '@/components/ProdutoDetalhes.vue'
+import AddNoCarrinho from '@/components/AddNoCarrinho.vue'
 
 export default {
 	name: 'ProdutoView',
@@ -48,7 +50,8 @@ export default {
 		Breadcrumbs,
 		ProdutoDescricao,
 		ProdutoDetalhes,
-		ArrowIcon
+		ArrowIcon,
+		AddNoCarrinho
 	},
 	data() {
 		return {

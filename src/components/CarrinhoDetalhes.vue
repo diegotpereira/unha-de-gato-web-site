@@ -1,7 +1,7 @@
 <template>
 	<div class="column is-4 is-offset-1">
 		<div class="table-container">
-			<table class="table-is-fullwidth">
+			<table class="table is-fullwidth">
 				<thead>
 					<tr>
 						<th colspan="2">
@@ -11,7 +11,7 @@
 				</thead>
 				<tr>
 					<td>Deltotal</td>
-					<td>{{ suma }} R$</td>
+					<td>{{ sum }} R$</td>
 				</tr>
 				<tr>
 					<td>Frete</td>
@@ -19,16 +19,17 @@
 				</tr>
 				<tr class="has-text-weight-bold">
 					<td>Montante</td>
-					<td>{{ soma }} R$</td>
+					<td>{{ sum }} R$</td>
 				</tr>
 			</table>
-			<button class="button is-primary is-fullwidth" @click="alternar">
+			<button class="button is-primary is-fullwidth" @click="toggle">
 				Vá para o caixa
 			</button>
 		</div>
 		<transition 
 			enter-active-class="animated fadeInDown"
-			leave-active-class="animated fadeOutUp" />
+			leave-active-class="animated fadeOutUp">
+		</transition>
 	</div>
 </template>
 <script>
@@ -40,13 +41,13 @@ export default {
 		}
 	},
 	props: {
-		soma: {
+		sum: {
 			type: Number,
-			reuired: true 
+			required: true 
 		}
 	},
 	methods: {
-		alternar() {
+		toggle() {
 
 		}
 	}

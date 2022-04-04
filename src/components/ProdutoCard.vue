@@ -18,7 +18,7 @@
 					<h3 class="is-size-6"> {{produto.titulo}} </h3>
 				</router-link>
 				<p class="title is-size-2 has-text-weight-bold is-marginless">
-					{{produto.preco}}
+					R$ {{produto.preco}}
 				</p>
 				<p v-if="produto.inventario" class="is-size-7">
 					<span class="icon">
