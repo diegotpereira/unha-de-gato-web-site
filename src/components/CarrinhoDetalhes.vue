@@ -11,7 +11,7 @@
 				</thead>
 				<tr>
 					<td>Deltotal</td>
-					<td>{{ sum }} R$</td>
+					<td>{{ soma }} R$</td>
 				</tr>
 				<tr>
 					<td>Frete</td>
@@ -19,7 +19,7 @@
 				</tr>
 				<tr class="has-text-weight-bold">
 					<td>Montante</td>
-					<td>{{ sum }} R$</td>
+					<td>{{ soma }} R$</td>
 				</tr>
 			</table>
 			<button class="button is-primary is-fullwidth" @click="toggle">
@@ -29,26 +29,34 @@
 		<transition 
 			enter-active-class="animated fadeInDown"
 			leave-active-class="animated fadeOutUp">
+
+			<Notificacao v-if="notificacao" :mensagem="mensagem" @clicked="toggle" />
 		</transition>
 	</div>
 </template>
 <script>
+import Notificacao from '@/components/Notificacao.vue'
 export default {
 	name: 'CarrinhoDetalhes',
+	components: {
+		Notificacao
+	},
 	data() {
 		return {
-			
+			notificacao: false,
+			mensagem: 
+				'Este recurso está indisponível no momento. Por favor, tente novamente mais tarde.'
 		}
 	},
 	props: {
-		sum: {
+		soma: {
 			type: Number,
 			required: true 
 		}
 	},
 	methods: {
 		toggle() {
-
+			this.notificacao = !this.notificacao
 		}
 	}
 }

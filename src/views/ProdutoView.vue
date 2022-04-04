@@ -21,6 +21,11 @@
 						<transition
 						enter-active-class="animated fadeInDown"
 						leave-active-class="animated fadeOutUp">
+
+						<Notificacao 
+								v-if="notificacao"
+								:mensagem="mensagem"
+								@clicked="toggle" />
 						
 						</transition>
 						<ProdutoDescricao />
@@ -42,6 +47,7 @@ import ProdutoDescricao from '@/components/ProdutoDescricao.vue'
 import ArrowIcon from 'vue-material-design-icons/ArrowLeft.vue';
 import ProdutoDetalhes from '@/components/ProdutoDetalhes.vue'
 import AddNoCarrinho from '@/components/AddNoCarrinho.vue'
+import Notificacao from '@/components/Notificacao.vue'
 
 export default {
 	name: 'ProdutoView',
@@ -51,12 +57,13 @@ export default {
 		ProdutoDescricao,
 		ProdutoDetalhes,
 		ArrowIcon,
-		AddNoCarrinho
+		AddNoCarrinho,
+		Notificacao
 	},
 	data() {
 		return {
-			message: 'Produto adicionado ao carrinho',
-			notification: false
+			mensagem: 'Produto adicionado ao carrinho',
+			notificacao: false
 		}
 	},
 	computed: {
@@ -72,14 +79,14 @@ export default {
 	},
 	methods: {
 		toggle() {
-			this.notification = !this.notification
+			this.notificacao = !this.notificacao
 		}
 	}
 }
 </script>
 
 <style scoped lang="scss">
-.notification {
+.notificacao {
 	margin-top: 1rem;
 }
 
