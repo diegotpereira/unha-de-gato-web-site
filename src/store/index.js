@@ -11,7 +11,8 @@ export const store = new Vuex.Store({
         atualProduto: {},
         produtos: [],
         blogPosts: [],
-        atualPost: {}
+        atualPost: {},
+        carrinhoCompras: []
 
     },
     plugins: [
@@ -47,6 +48,9 @@ export const store = new Vuex.Store({
         },
         getUltimosPosts: state => {
             return state.blogPosts.slice(-4, -1)
+        },
+        getCarrinhoCompras: state => {
+            return state.carrinhoCompras
         }
     },
     mutations: {
@@ -56,6 +60,12 @@ export const store = new Vuex.Store({
         },
         salvarAtualProduto: (state, produto) => {
             state.atualProduto = produto
+        },
+        removerDoCarrinhoCompras: (state, index) => {
+            state.carrinhoCompras.splice(index, 1)
+        },
+        atualizarQuantidade: (state, payload) => {
+            state.carrinhoCompras[payload.index].quantidade = payload.number
         }
     },
     actions: {
