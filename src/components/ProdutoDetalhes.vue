@@ -1,18 +1,29 @@
 <template>
 	<div class="product-details">
 		<h2 class="title is-3">{{ produto.titulo }}</h2>
-
+		<Rating 
+		class="icon-2x has-text-primary"
+		v-for="index in produto.avaliacao"
+		:key="index"
+		/>
 		<p class="title price">{{ produto.preco }}</p>
 	</div>
 </template>
 <script>
 import { mapGetters } from 'vuex'
+import Rating from 'vue-material-design-icons/Star.vue';
 export default {
 	name: 'ProdutoDetalhes',
+	components: {
+		Rating
+	},
 	data() {
 		return {
-			
+			restantes: 0
 		}
+	},
+	created() {
+		this.restantes = 5 - this.produto.avaliacao
 	},
 	computed: {
 		...mapGetters({

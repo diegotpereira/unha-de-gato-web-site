@@ -8,7 +8,7 @@
 import { mapGetters } from 'vuex'
 export default {
 	name: 'ProdutoDescricao',
-	components: {
+	computed: {
 		...mapGetters({
 			produto: 'getAtualProduto'
 		})

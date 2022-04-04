@@ -8,7 +8,7 @@
 				pagina="Produtos"
 				:to-categoria="produtoUrl"
 				:categoria="produto.categoria"
-				:title="produto.titulo" />
+				:titulo="produto.titulo" />
 				<div class="columns">
 					<div class="column is-half">
 						<figure class="image is-square">
@@ -58,7 +58,7 @@ export default {
 	},
 	computed: {
 		...mapGetters({
-			produto: 'getAtualProduto'
+			produto: 'getAtualProduto'	
 		}),
 		produtoImg() {
 			return require('@/assets/imagens/produtos/' + this.produto.image[0])
