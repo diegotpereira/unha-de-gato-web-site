@@ -6,21 +6,21 @@
           <div class="box has-background-white-ter">
             <truck-icon class="icon-2x" />
             <p class="is-uppercase">Entregas rápidas</p>
-            <p class="is-size-7">Enviamos sua mercadoria em um dia útil</p>
+            <p class="is-size-7">Consulte a área de entrega</p>
           </div>
         </div>
-        <div class="column is-one-third">
+        <!--<div class="column is-one-third">
           <div class="box has-background-white-ter">
             <shopping-icon class="icon-2x" />
             <p class="is-uppercase">Envio Grátis</p>
             <p class="is-size-7">Com entrega grátis em todos os pedidos</p>
           </div>
-        </div>
+        </div>-->
         <div class="column is-one-third">
           <div class="box has-background-white-ter">
             <phone-icon class="icon-2x" />
-            <p class="is-uppercase">Serviço profissional</p>
-            <p class="is-size-7">Suporte online 24 horas por dia</p>
+            <p class="is-uppercase">Qualidade Garantida</p>
+            <p class="is-size-7">12 meses de Garantia</p>
           </div>
         </div>
       </div>
@@ -29,14 +29,14 @@
 </template>
 <script>
 import TruckIcon from 'vue-material-design-icons/TruckFastOutline.vue'
-import ShoppingIcon from 'vue-material-design-icons/ShoppingOutline.vue'
+//import ShoppingIcon from 'vue-material-design-icons/ShoppingOutline.vue'
 import PhoneIcon from 'vue-material-design-icons/PhoneInTalkOutline.vue'
 
 export default {
 	name: 'Servicos',
 	components: {
 		TruckIcon,
-		ShoppingIcon,
+		//ShoppingIcon,
 		PhoneIcon
 	}
 }

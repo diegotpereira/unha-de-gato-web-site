@@ -4,15 +4,14 @@
 			<div class="collumns is-centered">
 				<div class="column is-two-thirds has-text-left-mobile has-text-centered">
 					<h1 class="title is-1 has-text-weight-bold">
-						A sua loja online da Unha de gatos contém interessantes acessórios e
-                        produtos para gato.
+						Fábrica de arranhadores artezanais linha premium.
 					</h1>
 					<p class="content is-medium">
 						Nossa gama está em constante expansão, o que significa que você sempre
-						encontre novos equipamentos o seu gato conosco.
+						encontre novos equipamentos para seu gato conosco.
 						Os gatos adoram brincar, por isso é importante que o seu gato tenha
-						oportunidade de permanecer ativo - especialmente quando é
-						sozinho em casa. Ao investir investir no seu equipamento certo seu gato
+						oportunidade de permanecer ativo, especialmente quando é
+						sozinho em casa. Ao investir no seu equipamento certo seu gato
 						terá uma vida muito mais saudavél.
 					</p>
 				</div>
