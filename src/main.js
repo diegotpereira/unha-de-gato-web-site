@@ -6,7 +6,7 @@ import 'vue-material-design-icons/styles.css';
 
 Vue.config.productionTip = false
 
-require('./assets/main.scss');
+require('./estilo/main.scss');
 
 new Vue({
     router,
