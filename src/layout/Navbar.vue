@@ -20,7 +20,7 @@
 		</div>
 		<div class="navbar-menu" v-bind:class="{'is-active': estaAberto}">
 			<div class="navbar-end">
-				<router-link to="/" class="navbar-item">Inicío</router-link>
+				<router-link to="/" class="navbar-item">Começo</router-link>
 				<router-link to="/produtos" class="navbar-item">Produtos</router-link>
 				<router-link to="/blog" class="navbar-item">Blog</router-link>
 				<router-link to="/sobre" class="navbar-item">Sobre</router-link>
